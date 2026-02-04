@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light AI | Community Feed</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            background-color: #fbfbfb; 
+            font-family: 'Inter', sans-serif; 
+        }
+        .navbar-brand { 
+            font-weight: 700; 
+            color: #dc3545 !important; 
+        }
+        .review-card {
+            border: none;
+            border-radius: 16px;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            margin-bottom: 24px;
+            overflow: hidden;
+            border-left: 4px solid #dc3545;
+        }
+        .product-badge {
+            background-color: #fff5f5;
+            color: #dc3545;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 6px;
+            text-transform: uppercase;
+        }
+        .star-rating {
+            color: #ffc107;
+            letter-spacing: 2px;
+        }
+        .trust-indicator {
+            background-color: #f8f9fa;
+            border-radius: 0 0 16px 16px;
+            padding: 12px 20px;
+            font-size: 0.85rem;
+            border-top: 1px solid #f1f1f1;
+        }
+        .empty-state-card {
+            padding: 80px 20px;
+            background: white;
+            border-radius: 20px;
+            border: 2px dashed #dee2e6;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-light bg-white border-bottom mb-5">
+        <div class="container">
+            <a class="navbar-brand" href="/dashboard">LIGHT AI</a>
+            <a href="/dashboard" class="btn btn-sm btn-outline-danger px-3 fw-bold">← Dashboard</a>
+        </div>
+    </nav>
+
+    <div class="container" style="max-width: 800px;">
+        <header class="text-center mb-5">
+            <h1 class="fw-bold h2">Verified Feed</h1>
+            <p class="text-muted">Public reviews validated by the Light AI Integrity Protocol.</p>
+        </header>
+
+        {% if reviews %}
+            {% for rid, r in reviews.items() %}
+            <div class="review-card">
+                <div class="p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="product-badge">{{ r.product_name }}</span>
+                        <div class="star-rating">
+                            {% for i in range(r.rating|int) %}★{% endfor %}
+                            <span class="text-muted small ms-1">({{ r.rating }})</span>
+                        </div>
+                    </div>
+
+                    <p class="h5 fw-normal text-dark mb-4" style="line-height: 1.6; font-style: italic;">
+                        "{{ r.text }}"
+                    </p>
+
+                    <div class="d-flex align-items-center text-muted small">
+                        <div class="me-2 fw-bold text-dark">User #{{ r.user_id }}</div>
+                        <div class="vr me-2"></div>
+                        <div>{{ r.time }}</div>
+                    </div>
+                </div>
+                
+                <div class="trust-indicator d-flex align-items-center">
+                    <svg width="18" height="18" fill="#198754" class="me-2" viewBox="0 0 16 16">
+                        <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                    </svg>
+                    <span class="text-success fw-bold small">VERIFIED GENUINE BY LIGHT AI</span>
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+            <div class="empty-state-card text-center">
+                <div class="mb-3 text-muted">
+                    <svg width="48" height="48" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path d="M4.285 12.433a.5.5 0 0 0 .683-.183A3.498 3.498 0 0 1 8 10.5c1.295 0 2.426.703 3.032 1.75a.5.5 0 0 0 .866-.5A4.498 4.498 0 0 0 8 9.5a4.5 4.5 0 0 0-3.898 2.25.5.5 0 0 0 .183.683z"/>
+                    </svg>
+                </div>
+                <h3 class="fw-bold">No Records Found</h3>
+                <p class="text-muted">The feed is currently empty. Be the first to contribute.</p>
+            </div>
+        {% endif %}
+    </div>
+
+    <footer class="text-center py-5 text-muted small">
+        &copy; 2026 Light AI Content Integrity Systems
+    </footer>
+
+</html>

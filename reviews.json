@@ -1,0 +1,97 @@
+{
+    "r001": {
+        "user_id": "u003",
+        "product_id": "p001",
+        "product_name": "Wireless Headphones",
+        "rating": 3.0,
+        "text": "good to use",
+        "time": "2026-02-04 11:57",
+        "result": "Genuine",
+        "score": 20,
+        "reasons": [
+            "Generic or short review"
+        ]
+    },
+    "r003": {
+        "user_id": "u005",
+        "product_id": "p002",
+        "product_name": "Gaming Mouse",
+        "rating": 3.4,
+        "text": "very bad to use this mouse \r\n",
+        "time": "2026-02-04 13:14",
+        "result": "Genuine",
+        "score": 0,
+        "reasons": []
+    },
+    "r004": {
+        "user_id": "u002",
+        "product_id": "p004",
+        "product_name": "4K Monitor",
+        "rating": 1.1,
+        "text": "very good",
+        "time": "2026-02-04 13:28",
+        "result": "Fake",
+        "score": 60,
+        "reasons": [
+            "Generic or short review",
+            "Rating vs sentiment mismatch",
+            "Rating deviates from product average"
+        ]
+    },
+    "r005": {
+        "user_id": "u002",
+        "product_id": "p004",
+        "product_name": "4K Monitor",
+        "rating": 1.0,
+        "text": "very good",
+        "time": "2026-02-04 13:30",
+        "result": "Fake",
+        "score": 60,
+        "reasons": [
+            "Generic or short review",
+            "Rating vs sentiment mismatch",
+            "Rating deviates from product average"
+        ]
+    },
+    "r006": {
+        "user_id": "u005",
+        "product_id": "p004",
+        "product_name": "4K Monitor",
+        "rating": 5.0,
+        "text": "very good",
+        "time": "2026-02-04 13:40",
+        "result": "Genuine",
+        "score": 20,
+        "reasons": [
+            "Generic or short review"
+        ]
+    },
+    "r007": {
+        "user_id": "u002",
+        "product_id": "p002",
+        "product_name": "Gaming Mouse",
+        "rating": 2.0,
+        "text": "very good ",
+        "time": "2026-02-04 13:45",
+        "result": "Fake",
+        "score": 60,
+        "reasons": [
+            "Generic or short review",
+            "Rating vs sentiment mismatch",
+            "Rating deviates from product average"
+        ]
+    },
+    "r008": {
+        "user_id": "u003",
+        "product_id": "p003",
+        "product_name": "Mechanical Keyboard",
+        "rating": 5.0,
+        "text": "very good",
+        "time": "2026-02-04 13:47",
+        "result": "Genuine",
+        "score": 20,
+        "reasons": [
+            "Generic or short review"
+        ]
+    }
+}

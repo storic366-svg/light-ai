@@ -1,0 +1,42 @@
+{
+    "u001": {
+        "username": "admin",
+        "password": "123",
+        "role": "admin",
+        "account_age_days": 365,
+        "total_reviews": 0,
+        "reported_reviews": 0
+    },
+    "u002": {
+        "username": "kaido",
+        "password": "1",
+        "role": "user",
+        "account_age_days": 0,
+        "total_reviews": 9,
+        "reported_reviews": 0
+    },
+    "u003": {
+        "username": "jai preethika",
+        "password": "1",
+        "role": "user",
+        "account_age_days": 0,
+        "total_reviews": 4,
+        "reported_reviews": 0
+    },
+    "u004": {
+        "username": "nandha kumar",
+        "password": "123",
+        "role": "user",
+        "account_age_days": 0,
+        "total_reviews": 1,
+        "reported_reviews": 0
+    },
+    "u005": {
+        "username": "cynthia",
+        "password": "7",
+        "role": "user",
+        "account_age_days": 0,
+        "total_reviews": 2,
+        "reported_reviews": 0
+    }
+}
